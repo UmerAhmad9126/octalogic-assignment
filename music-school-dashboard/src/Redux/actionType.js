@@ -1,0 +1,14 @@
+//products
+export const COURSE_REQUEST = "COURSE_REQUEST"
+export const COURSE_FAILURE = "COURSE_FAILURE"
+
+export const GET_COURSE_SUCCESS = "GET_COURSE_SUCCESS"
+export const POST_COURSE_SUCCESS = "POST_COURSE_SUCCESS"
+export const PATCH_COURSE_SUCCESS = "PATCH_COURSE_SUCCESS"
+
+
+//Authentication;
+
+export const LOGIN_REQUEST = "LOGIN_REQUEST";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAILURE = "LOGIN_FAILURE";

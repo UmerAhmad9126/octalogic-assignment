@@ -1,11 +1,11 @@
 import './App.css'
-import { TableDemo } from './components/Table'
+import AllRoutes from './Routes/AllRoutes'
 
 function App() {
 
   return (
     <>
-    <TableDemo/>
+      <AllRoutes />
     </>
   )
 }
