@@ -21,7 +21,7 @@ const getStudentsDataAction = (payload) => {
 export const getStudentsData = () => (dispatch) => {
     dispatch(courseRequestAction());
 
-    axios.get("http://localhost:8000/students?_sort=enrollmentDate&_order=desc")
+    axios.get("https://octalogic-backend-9hfj.onrender.com/students?_sort=enrollmentDate&_order=desc")
         .then((res) => {
             // console.log('res:', res.data);
             dispatch(getStudentsDataAction(res.data));

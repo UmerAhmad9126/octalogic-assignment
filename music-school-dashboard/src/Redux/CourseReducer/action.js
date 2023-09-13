@@ -23,7 +23,7 @@ const PostcourseSuccessAction = () => {
 export const getCourseData = () => (dispatch) => {
     dispatch(courseRequestAction());
 
-    axios.get("http://localhost:8000/courses")
+    axios.get("https://octalogic-backend-9hfj.onrender.com/courses")
         .then((res) => {
             // console.log('res:', res.data);
             dispatch(getcourseSuccessAction(res.data));
@@ -40,7 +40,7 @@ export const getCourseData = () => (dispatch) => {
 export const postCourseData = (payload) => (dispatch) => {
     dispatch(courseRequestAction());
 
-    axios.post("http://localhost:8000/courses", payload)
+    axios.post("https://octalogic-backend-9hfj.onrender.com/courses", payload)
         .then((res) => {
             dispatch(PostcourseSuccessAction());
             console.log('res:', res)
