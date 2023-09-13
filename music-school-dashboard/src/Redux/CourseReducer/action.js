@@ -32,4 +32,19 @@ export const getCourseData = () => (dispatch) => {
             // console.log('err:', err);
             dispatch(courseFailureAction());
         })
+};
+
+
+// post course Data
+export const postCourseData = (payload) => (dispatch) => {
+    dispatch(courseRequestAction());
+
+    axios.post("http://localhost:8000/courses", payload)
+        .then((res) => {
+            dispatch(PostcourseSuccessAction());
+            console.log('res:', res)
+        })
+        .catch((err) => {
+            dispatch(courseFailureAction());
+        })
 }

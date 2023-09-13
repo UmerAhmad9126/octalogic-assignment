@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from '../components/Sidebar'
 import search from "../images/search.png"
 import { CourseTable } from '../components/CourseTable'
+import ModalForm from '../components/ModalForm'
 
 const Course = () => {
   return (
@@ -40,10 +41,12 @@ const Course = () => {
           </div>
 
           <div className='flex justify-end mt-[100px] mb-[100px]'>
-            <button className='w-[150px] h-[60px] bg-[#FEC0CA] rounded-[10px]'>Add Course</button>
+            <ModalForm />
           </div>
 
+          
         </div>
+
 
       </div>
     </div>
