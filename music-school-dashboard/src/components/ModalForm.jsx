@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getCourseData, postCourseData } from '../Redux/CourseReducer/action';
-import { useToast } from "@/components/ui/use-toast"
+import { toast } from 'react-toastify';
 
 const initailState = {
     name: "",
@@ -18,7 +18,6 @@ function ModalForm() {
     const [isOpen, setIsOpen] = useState(false);
     const [courses, setCourses] = useState(initailState);
     const dispatch = useDispatch();
-    const {toast} = useToast();
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -42,9 +41,12 @@ function ModalForm() {
         e.preventDefault();
         closeModal();
         dispatch(postCourseData(courses));
-        toast({
-            description: "New Course Added.",
-        })
+
+        toast.success('New Course Added', {
+            position: 'top-center', // You can customize the position
+            autoClose: 3000, // Set the duration (in milliseconds)
+            hideProgressBar: false, // Show/hide the progress bar
+        });
 
 
     };

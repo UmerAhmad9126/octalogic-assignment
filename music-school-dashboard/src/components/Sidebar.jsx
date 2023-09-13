@@ -6,6 +6,10 @@ import logoutLogo from "../images/logout-logo.png"
 import { Link } from "react-router-dom"
 
 const Sidebar = () => {
+
+  const handleLogout = () => {
+
+  }
   return (
     <div className='w-[8%] h-[auto] border-2 bg-[#ffffff] '>
 
@@ -37,9 +41,8 @@ const Sidebar = () => {
 
 
       {/* Logout */}
-
       <Link to="/">
-        <div className='  w-[60%]  m-auto  mt-[720px] '>
+        <div onClick={handleLogout} className='  w-[60%]  m-auto  mt-[720px]  '>
           <img src={logoutLogo} alt="logoutLogo" className='m-auto' />
           <p className='text-center text-[12px] font-[400] text-[#83858B] '>Logout</p>
         </div>
