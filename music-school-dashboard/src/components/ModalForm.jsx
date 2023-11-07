@@ -43,9 +43,9 @@ function ModalForm() {
         dispatch(postCourseData(courses));
 
         toast.success('New Course Added', {
-            position: 'top-center', // You can customize the position
-            autoClose: 3000, // Set the duration (in milliseconds)
-            hideProgressBar: false, // Show/hide the progress bar
+            position: 'top-center',
+            autoClose: 3000,
+            hideProgressBar: false,
         });
 
 
@@ -53,7 +53,7 @@ function ModalForm() {
 
     useEffect(() => {
         dispatch(getCourseData());
-    })
+    }, [dispatch])
 
     return (
         <div>
